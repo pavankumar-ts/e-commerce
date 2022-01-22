@@ -1,25 +1,24 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import Banner from './components/banner/Banner';
+import { Category } from './components/Categories/Category';
+import Header from './components/Header/Header';
+import Login from './components/Login/Login';
+import Product from './components/products/product';
+import { loginContext } from './Context'
+
 
 function App() {
+  const [loginPage, setLoginPage] = useState(false)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <loginContext.Provider value={{ loginPage, setLoginPage }} >
+      <Header />
+      <Category />
+      <Banner />
+      {loginPage ? <Login /> : ''}
+      <Product />
+    </loginContext.Provider>
+  )
 }
 
 export default App;

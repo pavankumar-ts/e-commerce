@@ -1,0 +1,18 @@
+.dataWrap{
+    background: #FFFFFF;
+    display: flex;
+    padding-top: 20px;
+    justify-content: space-around;
+    margin: 0px 10%;
+    min-width: 750px;
+    box-shadow: 0 4px 4px 0 rgb(0 0 0 / 10%);;
+    position: absolute;
+    z-index: 9;
+    width: 85%;
+    padding-bottom: 100px;
+}
+.dataWrap h1{
+    font-weight: 500;
+    padding-bottom: 15px;
+    padding-top: 20px;
+}

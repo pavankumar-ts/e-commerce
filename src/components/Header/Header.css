@@ -1,0 +1,172 @@
+input:focus {
+    outline: none;
+}
+
+.header {
+    display: flex;
+    height: 80px;
+    background: #F7F8F9;
+    border-bottom: rgba(0, 0, 0, 0.342);
+    border-style: outset;
+    border-width: 1px;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    max-width: 60px;
+    margin-left: 5%;
+    font-size: 16px;
+}
+.logo img{
+    width: 48px;
+}
+
+.navWrapp {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0.7rem;
+    align-items: center;
+    margin-left: auto;
+    padding: auto;
+    margin-right: 10%;
+    margin-left: 50px;
+}
+.navWrapp:hover{
+    cursor: pointer;
+}
+.country {
+    display: flex;
+    align-items: center;
+    font-style: italic;
+    width: 100px;
+    border: #000000;
+    border-style: solid;
+    width: 16rem;
+    font-size: 1rem;
+    padding: 5px;
+    height: 40px;
+    border-radius: 4px;
+}
+
+.country input {
+    max-width: 272px;
+    margin-left: 5px;
+    outline: none;
+    border: none;
+    height: 100%;
+    width: 80%;
+}
+
+.searchBar {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    border: black;
+    border-style: solid;
+    border-radius: 5px;
+    height: 50px;
+    max-width: 500px;
+}
+
+.searchBar input {
+    width: 100%;
+    height: 90%;
+    font-size: 1.0rem;
+    border: none;
+}
+
+.searchIcon {
+    background: #002F34;
+    height: 100%;
+    min-width: 50px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    cursor: pointer;
+}
+
+.lang {
+    display: flex;
+    align-items: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.5rem;
+    position: relative;
+}
+.langOpt{
+    display: grid;
+    justify-content: center;
+    background: #fff;
+    position: absolute;
+    top: 30px;
+    width: 120px;
+    box-shadow: 0 4px 12px 1px rgb(0 0 0 / 50%);;
+    border-radius: 5px;
+    padding: 10px;
+    transition: all 3s;
+
+}
+.langOptHide{
+    display: none;
+    opacity: 0;
+}
+
+.notification {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2rem;
+}
+
+.chat {
+    font-size: 30px;
+}
+
+.profile {}
+
+.sell {
+    border: rgb(131, 40, 126);
+    border-style: solid;
+    border-width: 5px;
+    border-radius: 15px;
+    width: 70px;
+}
+
+.sell button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1rem;
+    padding: 5px;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+}
+
+@media only screen and (max-width: 1000px) {
+    .navWrapp {
+        margin-right: 30px;
+        margin-left: 20px;
+    }
+    .chat{
+        display: none;
+    }
+    .notification{
+        display: none;
+    }    
+    .logo {
+        margin-left: 30px;
+    }
+    .country{
+        display: none;
+    }
+    
+}
