@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import './Category.css'
 import { AiOutlineDown, AiOutlineUp } from 'react-icons/ai';
 import { DropDown } from './DropDown';
-import { Fragment } from 'react/cjs/react.production.min';
 
 
 export const Category = () => {
@@ -11,7 +10,7 @@ export const Category = () => {
         "Scooters", "Commercial & Other Vehicles",
         "For Rent: House & Apartments"]
     return (
-        <Fragment>
+        <fragment>
             <div className='categoryWrap'>
                 <div className="allCategory">
                     <h1>ALL CATEGORIES</h1>
@@ -27,6 +26,6 @@ export const Category = () => {
             </div>
             {categoryClick ? <DropDown /> : ''}
             {/* <DropDown /> */}
-        </Fragment>
+        </fragment>
     )
 }

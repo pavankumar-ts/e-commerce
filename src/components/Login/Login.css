@@ -13,7 +13,7 @@
     z-index: 999;
     background: rgba(0,0,0,.8);
 }
-.loginWrap {
+.content{
     position: relative;
     background: #FFFFFF;
     width: 400px;
@@ -22,96 +22,6 @@
     background: rgb(255, 255, 255);
     box-shadow: 10px 10px 5px grey;
     padding: 10px;
-}
-
-.banners {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.banner {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-h2{
-    font-size: 17px;
-}
-.img {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100px;
-    margin-top: 20px;
-}
-
-.toggle {
-    display: flex;
-    color: #A3B4B6;
-    font-size: 10px;
-}
-
-.toggle:hover {
-    cursor: pointer;
-}
-
-.active {
-    color: #23E5DB;
-}
-
-.login {
-    display: flex;
-    align-items: center;
-    border: black;
-    border-style: ridge;
-    border-width: 2px;
-    border-radius: 5px;
-    height: 48px;
-    font-size: 20px;
-    margin: 10px 20px;
-    font-weight: 450;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-}
-
-.icon {
-    margin: 0px 10px;
-}
-
-.login:hover {
-    border-width: 5px;
-    cursor: pointer;
-    height: 42px;
-}
-.or{
-    margin-bottom: 10px;
-}
-.email{
-    font-style: italic;
-    font-weight: 700;
-    border-bottom: black solid;
-}
-.email:hover{
-    cursor: pointer;
-}
-
-.footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 10px;
-}
-.policy{
-    font-size: 9px;
-}
-span{
-    margin-top: 3px;
-    color: #938FFF;
-}
-span:hover{
-    cursor: pointer;
 }
 .close{
     position: absolute;
