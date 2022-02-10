@@ -9,7 +9,6 @@ import { loginContext } from '../../Context'
 
 function Header() {
     const [lang, setLang] = useState(false)
-    const { loginPage, setLoginPage } = useContext(loginContext);
     return (
         <div className="header" >
             <div className='logo' >
@@ -23,7 +22,7 @@ function Header() {
                     <AiOutlineDown />
                 </div>
                 <div className='searchBar'>
-                    <input type="text" name="" id="" placeholder='Find Car, MobilePhones and more' />
+                    <input type="text" name="" id="" placeholder='Find Car, MobilePhones and more'/>
                     <div className="searchIcon">
                         <BiSearchAlt />
                     </div>
@@ -43,7 +42,7 @@ function Header() {
                     <GrNotification />
                 </div>
                 {/* calling login page onClick */}
-                <div className="profile" onClick={() => setLoginPage(true)} >
+                <div className="profile">
                     Login
                 </div>
                 <div className="sell">
