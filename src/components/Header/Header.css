@@ -5,12 +5,13 @@ input:focus {
 .header {
     display: flex;
     height: 80px;
-    background: #F7F8F9;
+    background: #dde0e265;
     border-bottom: rgba(0, 0, 0, 0.342);
     border-style: outset;
     border-width: 1px;
     position: fixed;
     top: 0;
+    left: 0;
     z-index: 10;
     width: 100%;
 }
@@ -38,9 +39,7 @@ input:focus {
     margin-right: 10%;
     margin-left: 50px;
 }
-.navWrapp:hover{
-    cursor: pointer;
-}
+
 .country {
     display: flex;
     align-items: center;
@@ -62,6 +61,7 @@ input:focus {
     border: none;
     height: 100%;
     width: 80%;
+    background: transparent;
 }
 
 .searchBar {
@@ -101,6 +101,9 @@ input:focus {
     font-size: 1.5rem;
     position: relative;
 }
+.lang:hover{
+    cursor: pointer;
+}
 .langOpt{
     display: grid;
     justify-content: center;
@@ -112,6 +115,7 @@ input:focus {
     border-radius: 5px;
     padding: 10px;
     transition: all 3s;
+    font-size: 0.8rem;
 
 }
 .langOptHide{
@@ -124,11 +128,13 @@ input:focus {
     font-size: 2rem;
 }
 
-.chat {
+.fav {
     font-size: 30px;
 }
 
-.profile {}
+.profile:hover{
+    cursor: pointer;
+}
 
 .sell {
     border: rgb(131, 40, 126);
@@ -137,6 +143,7 @@ input:focus {
     border-radius: 15px;
     width: 70px;
 }
+
 
 .sell button {
     display: flex;
@@ -150,15 +157,16 @@ input:focus {
     background: transparent;
     border: none;
 }
+.sell button:hover{
+    cursor: pointer;
+}
 
 @media only screen and (max-width: 1000px) {
     .navWrapp {
         margin-right: 30px;
         margin-left: 20px;
     }
-    .chat{
-        display: none;
-    }
+    
     .notification{
         display: none;
     }    

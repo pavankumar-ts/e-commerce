@@ -1,0 +1,42 @@
+.wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    border: solid 2px ;
+    padding: 10%;
+    font-weight: 600;
+    font-size: 20px;
+}
+.form input{
+    margin: 5px;
+    width: 300px;
+    height: 30px;
+    border: solid 2px;
+    padding: 4px;
+}
+form input:focus{
+    border: solid 4px #00A49F;
+    padding: 2px;
+}
+.sellbtn{
+    height: 40px;
+    margin: 15px;
+    border: 1px solid ;
+    background: #8ba7a6ce;
+    color: #fff;
+    border-radius: 6px;
+}
+.sellbtn:hover{
+    cursor: pointer;
+    background: #00A49F;
+    color: #fff;
+}
+#imgInput{
+    border: none;
+}

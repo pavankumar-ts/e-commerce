@@ -1,0 +1,89 @@
+.page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgba(43, 39, 39, 0.404);
+    position: relative;
+}
+.contentWrap{
+    width: 400px;
+    height: 600px;
+    background: rgb(255, 255, 255);
+    box-shadow: 20px 20px 15px rgb(75, 72, 72);
+    position: relative;
+}
+.closeIcon{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 2rem;
+    z-index: 10;
+}
+.closeIcon:hover{
+    cursor: pointer;
+}
+.hideBackIcon{
+    display: none;
+}
+.backIcon{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 2rem;
+    z-index: 10;
+}
+.backIcon:hover{
+    cursor: pointer;
+}
+
+
+
+.slideContent{
+    height: 200px;
+    margin-top: 40px;
+}
+.loginOptions{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.login{
+    display: flex;
+    align-items: center;
+    border: 2px rgb(32, 78, 64) solid;
+    border-radius: 5px;
+    width: 80%;
+    margin: 5px;
+    padding: 6px 0 6px 20px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.login:hover{
+    cursor: pointer;
+    border-width: 6px;
+    padding: 2px 0 2px 20px;
+}
+#facebook{
+    color: rgba(0, 0, 0, 0.418);
+}
+#facebook:hover{
+    border-color: rgba(0, 0, 0, 0.418);
+    cursor: no-drop;
+}
+.email{
+    border-bottom: 1px black solid;
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.email:hover{
+    cursor: pointer;
+}
+h6{
+    font-size: 10px;
+    font-style: italic;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.icon{
+    margin-right: 5px;
+}

@@ -3,12 +3,19 @@ import './Header.css'
 import Logo from '../../Images/logo.png'
 import { BiSearchAlt2, BiSearchAlt } from 'react-icons/bi'
 import { AiOutlineDown, AiOutlineUp, AiOutlinePlus } from 'react-icons/ai'
-import { BsFillChatFill } from 'react-icons/bs'
+import { BsFillHeartFill } from 'react-icons/bs'
 import { GrNotification } from 'react-icons/gr'
-import { loginContext } from '../../Context'
+import { UserContext } from '../../Context'
+import Profile from './profile/Profile'
+import { useNavigate } from 'react-router-dom'
+
+
 
 function Header() {
-    const [lang, setLang] = useState(false)
+    const user = useContext(UserContext);
+    const navigate = useNavigate();
+    const [lang, setLang] = useState(false);
+
     return (
         <div className="header" >
             <div className='logo' >
@@ -22,7 +29,7 @@ function Header() {
                     <AiOutlineDown />
                 </div>
                 <div className='searchBar'>
-                    <input type="text" name="" id="" placeholder='Find Car, MobilePhones and more'/>
+                    <input type="text" name="" id="" placeholder='Find Car, MobilePhones and more' />
                     <div className="searchIcon">
                         <BiSearchAlt />
                     </div>
@@ -35,18 +42,22 @@ function Header() {
                         <h2 onClick={() => alert("हिन्दी is temporarily  available")} >हिन्दी</h2>
                     </div>
                 </div>
-                <div className="chat">
-                    <BsFillChatFill />
+                <div className="fav">
+                    <BsFillHeartFill />
                 </div>
                 <div className="notification">
                     <GrNotification />
                 </div>
                 {/* calling login page onClick */}
-                <div className="profile">
-                    Login
+                <div className="profile" >
+                    <Profile />
                 </div>
-                <div className="sell">
-                    <button>
+                <div className="sell" >
+                    {console.log("Login",user)}
+                    <button onClick={() => {
+                        user.user!= false ? navigate('/sell') : alert("Please login")
+                    }
+                    }>
                         <AiOutlinePlus style={{ marginRight: "10%" }} />SELL
                     </button>
                 </div>

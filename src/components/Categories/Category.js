@@ -10,7 +10,7 @@ export const Category = () => {
         "Scooters", "Commercial & Other Vehicles",
         "For Rent: House & Apartments"]
     return (
-        <fragment>
+        <>
             <div className='categoryWrap'>
                 <div className="allCategory">
                     <h1>ALL CATEGORIES</h1>
@@ -19,13 +19,13 @@ export const Category = () => {
                     </div>
                 </div>
                 <div className="list">
-                    {list.map((item) => (
-                        <h2>{item}</h2>
+                    {list.map((item, key) => (
+                        <h2 key={key}>{item}</h2>
                     ))}
                 </div>
             </div>
             {categoryClick ? <DropDown /> : ''}
             {/* <DropDown /> */}
-        </fragment>
+        </>
     )
 }
