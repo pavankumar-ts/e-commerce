@@ -6,7 +6,7 @@ function Banner() {
         <div className='bannerWrap'>
             <div className="btnWrap">
                 <button >
-                    Sell car
+                    Sell
                 </button>
             </div>
         </div>

@@ -128,8 +128,11 @@ input:focus {
     font-size: 2rem;
 }
 
-.fav {
+.cart {
     font-size: 30px;
+}
+.cart:hover{
+    cursor: pointer;
 }
 
 .profile:hover{

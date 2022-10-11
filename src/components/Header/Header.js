@@ -2,8 +2,7 @@ import React, { useContext, useState } from 'react'
 import './Header.css'
 import Logo from '../../Images/logo.png'
 import { BiSearchAlt2, BiSearchAlt } from 'react-icons/bi'
-import { AiOutlineDown, AiOutlineUp, AiOutlinePlus } from 'react-icons/ai'
-import { BsFillHeartFill } from 'react-icons/bs'
+import { AiOutlineDown, AiOutlineUp, AiOutlinePlus, AiOutlineShoppingCart } from 'react-icons/ai'
 import { GrNotification } from 'react-icons/gr'
 import { UserContext } from '../../Context'
 import Profile from './profile/Profile'
@@ -42,8 +41,8 @@ function Header() {
                         <h2 onClick={() => alert("हिन्दी is temporarily  available")} >हिन्दी</h2>
                     </div>
                 </div>
-                <div className="fav">
-                    <BsFillHeartFill />
+                <div className="cart" onClick={() => navigate('/cart')} >
+                    <AiOutlineShoppingCart />
                 </div>
                 <div className="notification">
                     <GrNotification />

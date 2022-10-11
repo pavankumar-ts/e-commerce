@@ -14,41 +14,14 @@ const Product = () => {
     useEffect(() => {
         const q = query(collection(db, "olxSell"));
         const unsubscribe = onSnapshot(q, (querySnapshot) => {
-            const cities = [];
+            const productlist = [];
             querySnapshot.forEach((doc) => {
-                cities.push(doc.data());
+                productlist.push(doc.data());
             });
-            setData(cities);
+            setData(productlist);
         });
-
-
 
     }, []);
-
-    const FavHandler = (productId) => {
-        console.log(user.uid, "prod", productId);
-        const [liked, setLiked] = useState(false)
-        const async = async () => {
-            console.log("as");
-            const fav = query(collection(db, "fav"), where("userId", "==", user.uid), where("productId", "==", productId));
-            const querySnapshot = await getDocs(fav);
-            querySnapshot.forEach((doc) => {
-                console.log(doc.id, " => ", doc.data());
-                setLiked(true)
-            });
-        }
-        async()
-        return (
-            liked ? <AiOutlineHeart /> : <BsFillSuitHeartFill />
-        )
-    }
-
-    const favBtnHandler = async (productId) => {
-        await addDoc(collection(db, "fav"), {
-            userId: user.uid,
-            productId: productId
-        });
-    }
 
 
     return (
@@ -59,7 +32,6 @@ const Product = () => {
                         <div className='wrapper' key={index}  >
                             <div className="top" >
                                 <img className='productIng' src={item.img} alt="img" onClick={() => setFullScreen(item.img)} />
-                                <div className="like" onClick={() => favBtnHandler(item.productId)} > <FavHandler productId = {item.productId} />  </div>
                             </div>
                             <div className="bottom" onClick={() => setFullScreen(item.img)} >
                                 <div className="price"><BiRupee /><h1>{item.price}</h1></div>

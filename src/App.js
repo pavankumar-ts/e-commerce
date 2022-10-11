@@ -7,6 +7,7 @@ import LoginPage from './pages/LoginPage';
 import { UserContext } from './Context'
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import Sell from './components/Sell/Sell';
+import Cart from './components/cart/Cart';
 
 
 function App() {
@@ -40,6 +41,9 @@ function App() {
         </Routes>
         <Routes>
           <Route path='/sell' element={<Sell />} />
+        </Routes>
+        <Routes>
+          <Route path='/cart' element={<Cart />} />
         </Routes>
       </UserContext.Provider>
   )
